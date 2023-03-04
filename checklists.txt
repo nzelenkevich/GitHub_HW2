@@ -1,8 +1,9 @@
 Functional Testing
-Usability, UI/UX Testing
+Usability,  UI/UX Testing
 Performance testing
 Compatibility Testing
 Localization Testing
 Security Testing
 Accessibility Testing
+
 
