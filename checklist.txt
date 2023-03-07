@@ -5,5 +5,3 @@ Compatibility Testing
 Localization Testing
 Security Testing
 Accessibility Testing
-
-
