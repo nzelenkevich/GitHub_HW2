@@ -1,0 +1,97 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug_Reports
+- SQL
+- Charles
+- Mobile_testing
+
+Создаем внешний репозиторий c названием GitHub_HW2.
+- заходим на сайт https://github.com/
+- переходим в личный кабинет https://github.com/nzelenkevich
+- открываем раздел репозиторий https://github.com/nzelenkevich?tab=repositories
+- нажимаем на кнопку "new"
+- в графе "Repository name" вводим GitHub_HW2
+- выбираем тип репозитрия "Public"
+- ставим галочку напротив "Add a README file"
+- нажимаем кнопку "Create repository"
+- репозиторий GitHub_HW2 создан
+ Клонируем репозиторий GitHub_HW2 на локальный компьютер.
+- заходим в папку в которую хотим клонировать репозитрий GitHub_HW2
+- заходим в Terminal
+- в репозитории GitHub_HW2 в GitHub жмем кнопку "<> Code"
+- копирем ссылку на репозиторий в HTTPS
+- вставляем в терминал, используя команду "git clone https://github.com/nzelenkevich/GitHub_HW2.git"
+- в терминале используя команду "ls -la" проверяем клонирован ли репозиторий GitHub_HW2
+- переходим в локальный репозиторий GitHub_HW2 используя команду "cd /d/git/GitHub_HW2/"
+Создаем ветки
+- в терминале используя команду "git branch name_branch" создаем новые ветки
+
+2. Запушить все ветки на внешний репозиторий
+- в терминале используя команду "push branch -u origin name_branch" пушим все ветки на внешний репозиторий
+
+3. В ветке Bug_Reports сделать текстовый документ со структурой баг репорта
+- в терминале используя команду "git checkout Bug_reports" переходим в данную ветку
+- в терминале используя команду "touch bug_report.txt" создаем текстовый документ
+- в терминале используя команду "vim bug_report.txt" переходим в режим редактирования
+- для редактирования файла нажимаем "i" 
+- вносим данные: 
+
+Bug ID:
+Bug title:
+Date:
+Reporter:
+Environment:
+Frequency:
+Priority:
+Severity:
+Steps to reproduce:
+Expected result:
+Actual result:
+Notes:
+- нажимаем последовательно для сохранения и выхода из режима редактирования "esc : x"
+
+4. Запушить структуру багрепорта на внешний репозиторий
+- в терминале используя команду "git add ." выбираем все файлы данного репозитория
+- в терминале используя команду "git commit -m "bug_report"" добавляем коммит
+- в терминале используя команду "git push" добавляем выбранные файлы на внешний репозиторий
+
+5. Вмержить ветку Bug_Reports в Main
+- в терминале используя команду "git main" переходим в основную ветку
+- в терминале используя команду "git merge bug_report" переносим изменения из ветки Bug_reports в ветку Main 
+
+6. Запушить main на внешний репозиторий.
+- в терминале используя команду "git push" добавляем изменения не внешний репозиторий
+
+7. В ветке CheckLists набросать структуру чек листа.
+- в терминале используя команду "git checkout Checklists" переходим в данную ветку
+- в терминале используя команду "touch checklist.txt" создаем текстовый документ 
+- в терминале используя команду "vim checklist.txt" вносим данные: 
+
+Functional Testing
+Usability, UI/UX Testing
+Performance testing
+Compatibility Testing
+Localization Testing
+Security Testing
+Accessibility Testing
+
+- нажимаем последовательно для сохранения и выхода из режима редактирования "Esc : x"
+
+8. Запушить структуру на внешний репозиторий
+- в терминале используя команду "git add ." выбираем все файлы данного репозитория
+- в терминале используя команду "git commit -m "checklist"" добавляем коммит
+- в терминале используя команду "git push" добавляем выбранные файлы на внешний репозиторий
+
+9. На внешнем репозитории сделать Pull Request ветки Checklists в main
+- на внешнем репозитории в navigation переходу в раздел "pull requests"
+- нажимаю кнопку "new pull request"
+- выбираю в dropdown menu "compare:Checklists" - т.е. внесение изменений с ветки checklists на ветку main
+- нажимаю на кнопку "view pull request"
+- нажимаю на кнопку "merge pull request", при этом в drop down menu выбрано "create a merge commit"
+- нажимаю на кнопку "confirm merge"
+- перехожу на ветку main и вижу, что файл checklist.txt перенесен 
+10. Синхронизировать Внешнюю и Локальную ветки Main
+- в терминале используя команду "git checkout main" переходим в ветку main
+- в терминале используя команду "git pull" переносим изменения для ветки main с внешнего репозитория на локальный
